@@ -1,0 +1,30 @@
+<div ng-controller="MainCtrl as main">
+<div class="container">
+  <div class="row">
+    <div ng-repeat="todo in todos" class="text-center">
+        {{todo}}
+    </div>
+    <div class="orderByTxt text-center">
+      <h2>Tutorials</h2>
+      <h3>Order By:</h3>
+        <h4><a href="" ng-click="predicate = 'author'; reverse=false">Author</a></h4>
+        <h4><a href="" ng-click="predicate = 'title'; reverse=false">Tutorial Title</a></h4>
+        <h4><a href="" ng-click="predicate = 'url'; reverse=false">Tutorial URL</a></h4>
+      </div>
+      <br>
+      <div class="col-sm-4 col-md-6 text-center" ng-repeat="tut in tutorials">
+        <span class="thumbnail">
+          <img ng-src="{{tut.image}}" class="thumb_image">
+          <span class="caption">
+            <h3>{{tut.author}}</h3>
+            <h3>{{tut.title}}</h3>
+            <a href="{{tut.url}}" target="blank">{{tut.url}}</p>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
